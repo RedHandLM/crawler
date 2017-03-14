@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regular>
+    <redis>
+
+        <dbnum>1</dbnum>
+
+        <host>127.0.0.1</host>
+
+        <port>6379</port>
+
+        <password></password>
+
+    </redis>
+</regular>

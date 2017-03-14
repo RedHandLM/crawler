@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" name="BIG_DATA_PLATFORM_LOG_CRAWLER_WHITEPAGE"
+               packages="" monitorInterval="30">
+    <properties>
+        <!-- home 日志总目录 -->
+        <property name="LOG_HOME">log</property>
+
+    </properties>
+    
+    <Appenders>
+
+        <!-- appenders for verificationcode  %highlight{%throwable{full}}{STYLE=red}-->
+        <RollingRandomAccessFile name="news_info"
+                                 fileName="${LOG_HOME}/logger.info.log"
+                                 filePattern="${LOG_HOME}/logger.info.$${date:yyyy-MM}/logger.info.%d{yyyy-MM-dd}-%i.log">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+
+            <PatternLayout>
+                <Pattern>%d{ISO8601} %p [%t] %c  - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="250 MB"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="news_warn"
+                                 fileName="${LOG_HOME}/logger.warn.log"
+                                 filePattern="${LOG_HOME}/logger.warn.$${date:yyyy-MM}/logger.warn.%d{yyyy-MM-dd}-%i.log">
+            <ThresholdFilter level="warn" onMatch="ACCEPT"  onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>%d{ISO8601} %p [%t] %c  - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="250 MB"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="news_error"
+                                 fileName="${LOG_HOME}/logger.error.log"
+                                 filePattern="${LOG_HOME}/logger.error.$${date:yyyy-MM}/logger.error.%d{yyyy-MM-dd}-%i.log">
+           <ThresholdFilter level="error" onMatch="ACCEPT"  onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>%d{ISO8601} %p [%t] %c  - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="250 MB"/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <!--输出到控制台-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <!--输出到控制台-->
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="news_info"/>
+            <AppenderRef ref="news_warn"/>
+            <AppenderRef ref="news_error"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

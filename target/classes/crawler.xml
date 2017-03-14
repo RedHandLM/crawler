@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--需要的所有正则表达式及数据语句 -->
+<regular>
+
+    <website>
+        <!-- 招聘爬虫 -->
+        <website1>liepin</website1>
+        <website2>lagou</website2>
+    </website>
+
+    <!-- 招聘爬虫 -->
+    <liepin>
+        <ListProcess>com.hunteron.crawler.handler.liepin.LiepinListProcess</ListProcess>
+        <DetailProcess>com.hunteron.crawler.handler.liepin.LiepinDetailProcess</DetailProcess>
+        <DetailThread>1</DetailThread>
+    </liepin>
+    <lagou>
+        <process>com.hunteron.crawler.handler.lagou.LagouProcess</process>
+    </lagou>
+
+    <!-- 代理爬虫 -->
+    <proxy>
+        <proxy1>xici</proxy1>
+        <proxy2>you</proxy2>
+    </proxy>
+
+    <xici>
+        <process>com.hunteron.crawler.handler.xicidaili.XiciProcess</process>
+    </xici>
+    <you>
+        <process>com.hunteron.crawler.handler.youdaili.YouProcess</process>
+    </you>
+
+</regular>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regular>
+    <mysql>
+
+        <url>jdbc:mysql://127.0.0.1:3306/crawler?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;useCursorFetch=true&amp;defaultFetchSize=100</url>
+
+        <name>com.mysql.jdbc.Driver</name>
+
+        <user>root</user>
+
+        <password>admin</password>
+
+    </mysql>
+
+</regular>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regular>
+
+    <kafka>
+
+        <thread-num>1</thread-num>
+
+    </kafka>
+
+    <topic-producer>
+
+        <topic>store.level.up</topic>
+
+    </topic-producer>
+
+    <kafka-producer>
+
+        <metadata.broker.list>10.47.126.64:9092</metadata.broker.list>
+
+        <serializer.class>kafka.serializer.StringEncoder</serializer.class>
+
+        <producer.type>sync</producer.type>
+
+        <compression.codec>1</compression.codec>
+
+    </kafka-producer>
+
+    <topic-consumer>
+
+        <topic>store.level.up</topic>
+
+    </topic-consumer>
+
+    <kafka-consumer>
+
+        <zookeeper.connect>10.47.126.160:2181</zookeeper.connect>
+
+        <zookeeper.connectiontimeout.ms>30000</zookeeper.connectiontimeout.ms>
+
+        <group.id>credits_test</group.id>
+
+        <zookeeper.session.timeout.ms>4000</zookeeper.session.timeout.ms>
+
+        <zookeeper.sync.time.ms>2000</zookeeper.sync.time.ms>
+
+        <auto.commit.interval.ms>10000</auto.commit.interval.ms>
+
+        <auto.offset.reset>smallest</auto.offset.reset>
+
+    </kafka-consumer>
+
+</regular>

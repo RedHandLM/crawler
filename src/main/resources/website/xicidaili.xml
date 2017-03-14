@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regular>
+
+    <header>
+
+        <Accept>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</Accept>
+
+        <Accept-Language>zh-CN,zh;q=0.8</Accept-Language>
+
+        <Cache-Control>max-age=0</Cache-Control>
+
+        <Connection></Connection>
+
+        <Cookie></Cookie>
+
+        <Host></Host>
+
+        <Referer></Referer>
+
+        <User-Agent>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36</User-Agent>
+
+    </header>
+
+    <producer>
+
+        <ipPort>&lt;td&gt;(\d+.\d+.\d+.\d+&lt;/td&gt;&lt;td&gt;\d+)&lt;/td&gt;</ipPort>
+
+        <coding>utf-8</coding>
+
+    </producer>
+
+</regular>

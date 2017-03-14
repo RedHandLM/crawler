@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regular>
+
+    <details>
+
+        <title>&lt;title&gt;([\S]*?)(\||_|&lt;/title&gt;)</title>
+
+        <createdAt>(\d{4}年\d{1,2}月\d{1,2}日\s*\d{1,2}:\d{1,2})</createdAt>
+
+        <content>(data-sudaclick="blk_content"&gt;|&lt;!--原始正文start--&gt;)([\S]*?)(&lt;/p&gt;&lt;/div&gt;|&lt;/div&gt;&lt;/div&gt;|&lt;!--原始正文end--&gt;)</content>
+
+        <editor>class="show_author"&gt;([\S]*?)&lt;/div&gt;</editor>
+
+        <tagFlag>&lt;title&gt;[\S]*?&lt;/title&gt;</tagFlag>
+
+        <tag>\|([\S]*?)_</tag>
+
+    </details>
+
+</regular>
